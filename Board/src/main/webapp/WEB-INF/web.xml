@@ -13,6 +13,19 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- 직접접근 제어 -->
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>PreventViewingJSPs</web-resource-name>
+	        <description>브라우저로 접속한 사용자가 JSP파일로 직접 접근할 수 없도록 한다.</description>
+	        <url-pattern>*.jsp</url-pattern>
+	        <http-method>GET</http-method>
+	        <http-method>POST</http-method>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name></role-name> <!-- 여기에 role-name을 적어도 된다. 존재하지 않는 것으로 -->
+	    </auth-constraint>
+	</security-constraint>
 
 	<!-- Processes application requests -->
 	<servlet>

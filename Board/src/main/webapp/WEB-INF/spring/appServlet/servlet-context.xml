@@ -26,7 +26,7 @@
 	<beans:bean id="uploadPath" class="java.lang.String">
 	<!-- /home/201444074/files -->
 	<!-- C:\Users\han\Desktop\Board\Board\src\main\webapp\resources\files -->
-		<beans:constructor-arg value="/home/201444074/files">
+		<beans:constructor-arg value="C:\Users\han\Desktop\Board\Board\src\main\webapp\resources\files">
 		</beans:constructor-arg>
 	</beans:bean>	
 	<context:component-scan base-package="com.inhatc.board" />

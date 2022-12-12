@@ -31,8 +31,11 @@
 	</update>
 		
 	<delete id="delete_post">
+		delete from tbl_attach
+		where bno = #{bno};
+		
 		delete from tbl_board
-		where bno = #{bno}
+		where bno = #{bno};
 	</delete>
 	
 	<update id="update_post">
